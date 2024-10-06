@@ -2,8 +2,8 @@
 
 const countriesUrl = `https://restcountries.com/v3.1/name/`
 
-function getCountryInfo(countryName) {
-    const url = `${countriesUrl}${countryName}`
+function getCountryByName(name) {
+    const url = `${countriesUrl}${name}`
 
     return axios
         .get(url)

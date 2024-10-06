@@ -4,7 +4,7 @@ function onGetCountryInfo() {
     const searchValue = document.querySelector('.country-input').value.toLowerCase() || 'Israel'
     console.log('value:', searchValue)
 
-    getCountryInfo(searchValue)
+    getCountryByName(searchValue)
         .then(renderInfo)
         .catch(err => console.log('err:', err))
 }
