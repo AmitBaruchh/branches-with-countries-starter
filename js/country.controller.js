@@ -2,7 +2,6 @@
 
 function onGetCountryInfo() {
     const searchValue = document.querySelector('.country-input').value.toLowerCase() || 'Israel'
-    console.log('value:', searchValue)
 
     getCountryByName(searchValue)
         .then(renderInfo)
@@ -11,8 +10,6 @@ function onGetCountryInfo() {
 
 function renderInfo(data) {
     const { name, population, area, borders, flag } = data
-    console.log('name:', name)
-    console.log('population:', population)
 
     const elCountryInfo = document.querySelector('.country-container')
     const strHTMLs = `
