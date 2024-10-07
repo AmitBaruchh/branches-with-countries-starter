@@ -10,10 +10,14 @@ body {
     text-align: center;
 }
 
+h1 {
+    margin: 20px auto;
+}
+
 .country-name {
     font-size: 24px;
     font-weight: bold;
-    margin: 20px auto;
+    margin: 20px;
 }
 
 .hide {
@@ -49,7 +53,8 @@ body {
     width: 200px;
 }
 
-.search-btn {
+.search-btn,
+.clear-cache-btn {
     padding: 8px 16px;
     cursor: pointer;
     background-color: #007bff;
@@ -58,6 +63,7 @@ body {
     border-radius: 4px;
 }
 
-.search-btn:hover {
+.search-btn:hover,
+.clear-cache-btn:hover {
     background-color: rgb(1, 63, 129);
 }

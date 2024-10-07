@@ -27,9 +27,13 @@ function getCountryByName(name) {
             }
 
             countries[name] = countryData
-            saveToStorage(COUNTRIES_KEY, countries)
+            saveCountries(countries)
 
             return countryData
         })
         .catch(err => console.log('err:', err))
+}
+
+function saveCountries(countries) {
+    saveToStorage(COUNTRIES_KEY, countries)
 }

@@ -18,3 +18,7 @@ function renderInfo(data) {
 
     document.querySelector('.country-flag').classList.remove('hide')
 }
+
+function onClearCache() {
+    saveCountries({})
+}
