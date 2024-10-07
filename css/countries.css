@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+
+    text-align: center;
+}
+
+.country-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px auto;
+}
+
+.hide {
+    display: none;
+}
+
+.country-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.country-population,
+.country-area {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.country-flag {
+    width: 200px;
+    height: auto;
+    margin-top: 20px;
+    border: 2px solid #ddd;
+}
+
+.country-input {
+    padding: 8px;
+    width: 200px;
+}
+
+.search-btn {
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.search-btn:hover {
+    background-color: rgb(1, 63, 129);
+}

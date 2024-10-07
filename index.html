@@ -18,7 +18,12 @@
         <main>
             <input type="text" class="country-input" placeholder="Enter country name" />
             <button class="search-btn" onclick="onGetCountryInfo()">Search</button>
-            <section class="country-container"></section>
+            <section class="country-container">
+                <h2 class="country-name"></h2>
+                <p class="country-population"></p>
+                <p class="country-area"></p>
+                <img class="country-flag hide" src="" alt="Country flag" />
+            </section>
         </main>
         <script src="lib/axios.js"></script>
 

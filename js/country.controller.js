@@ -10,17 +10,11 @@ function onGetCountryInfo() {
 
 function renderInfo(data) {
     const { name, population, area, borders, flag } = data
+    document.querySelector('.country-name').textContent = name
+    document.querySelector('.country-population').textContent = `Population: ${population.toLocaleString()} people`
+    document.querySelector('.country-area').textContent = `Area: ${area.toLocaleString()} km²`
+    document.querySelector('.country-flag').src = flag
+    document.querySelector('.country-flag').alt = `${name} flag`
 
-    const elCountryInfo = document.querySelector('.country-container')
-    const strHTMLs = `
-        <h2>${name}</h2>
-        <pre class="country-info">
-        Population: ${population.toLocaleString()} people
-        Area: ${area.toLocaleString()} km²
-        Borders: ${borders.length ? borders.join(', ') : 'No neighboring countries'}
-        </pre>
-        <img src="${flag}" alt="${name} flag">
-    `
-
-    elCountryInfo.innerHTML = strHTMLs
+    document.querySelector('.country-flag').classList.remove('hide')
 }
