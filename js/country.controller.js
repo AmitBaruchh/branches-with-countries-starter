@@ -1,11 +1,22 @@
 'use strict'
 
 function onGetCountryInfo() {
-    const searchValue = document.querySelector('.country-input').value.toLowerCase() || 'Israel'
+    const elLoader = document.querySelector('.loader')
+    elLoader.classList.remove('hide')
+    document.querySelector('.country-container').classList.add('hide')
 
+    const searchValue = document.querySelector('.country-input').value.toLowerCase().trim() || 'Israel'
     getCountryByName(searchValue)
-        .then(renderInfo)
-        .catch(err => console.log('err:', err))
+        .then(data => {
+            renderInfo(data)
+            elLoader.classList.add('hide')
+            document.querySelector('.country-container').classList.remove('hide')
+        })
+        .catch(err => {
+            console.log('err:', err)
+            elLoader.classList.add('hide')
+            document.querySelector('.country-container').classList.remove('hide')
+        })
 }
 
 function renderInfo(data) {
